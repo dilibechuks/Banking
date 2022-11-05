@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="flex">
+      <div class="element-center">
+        <div>
+          <span class="wrap"></span>
+          <h1>Dilibe Online Banking System</h1>
+        </div>
+        <div id="welcome">
+          <div id="loginDivision">
+            <p>The Smart Way to Bank</p>
+            <input
+              type="text"
+              id="loginAcctNumber"
+              required
+              placeholder="Account Number"
+            />
+            <input type="text" id="loginPin" required placeholder="PIN" />
+            <button id="btn-login" type="submit" onclick="Login()">
+              Login
+            </button>
+            <p>Please Enter Your Account Number and your 4-digit PIN</p>
+            <p>
+              Don't have an account?
+              <button class="create2" onclick="create2()">
+                Create Account
+              </button>
+            </p>
+          </div>
+          <div id="createDivision" style="visibility: hidden">
+            <input
+              type="text"
+              id="createAcctName"
+              required
+              placeholder="Account Name"
+            />
+            <input type="text" id="createPin" required placeholder="PIN" />
+            <button
+              id="btn-create"
+              style="margin-top: 0.5rem"
+              onclick="createAccount()"
+            >
+              Create Account
+            </button>
+            <br />
+            <label for="" id="createdAccountNumber"></label>
+            <p>Please Enter Your Preferred Account Name and a 4-digit PIN</p>
+            <p>
+              Already Registered?
+              <button class="login2" onclick="login2()">Login</button>
+            </p>
+          </div>
+        </div>
+
+        <!-- style="visibility: hidden" -->
+        <div id="inputs" style="visibility: hidden">
+          <p id="welcomeMessage"></p>
+          <button id="logout" onclick="logout()">Logout</button>
+          <h2>Deposit</h2>
+          <button id="btnDeposit" style="width: 150px">Deposit</button>
+          <input
+            type="text"
+            style="margin-left: 1rem"
+            id="userDeposit"
+            required
+            placeholder="Amount to Deposit"
+          />
+
+          <h2>Withdraw</h2>
+          <button id="btnWithdraw" style="width: 150px">Withdraw</button>
+          <input
+            type="text"
+            style="margin-left: 1rem"
+            id="userWithdraw"
+            required
+            placeholder="Amount to Withdraw"
+          />
+
+          <h2>Transfer</h2>
+          <button id="btnTransfer" style="width: 150px">Transfer</button>
+          <input
+            type="text"
+            style="margin-left: 1rem"
+            id="userTransferAcctNumber"
+            required
+            placeholder="Recipient Account Number"
+          />
+          <input
+            type="text"
+            id="userTransferAmount"
+            required
+            placeholder="Enter Amount"
+          />
+
+          <h2>Account Balance</h2>
+          <button id="btnCheckBalance" onclick="balance()" style="width: 150px">
+            Check Balance
+          </button>
+          <label
+            id="acctBalanceLbl"
+            style="margin-left: 1rem; visibility: hidden"
+          ></label>
+
+          <h2>Last Transaction</h2>
+          <button id="btnLastTransaction" style="width: 150px">
+            Last Transaction
+          </button>
+          <label id="lastTransactionLbl" style="margin-left: 1rem"
+            >Last Transaction shows here</label
+          >
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="scripts.js"></script>
+    <!-- <script type="text/javascript" src="typewriter_script.js"></script> -->
+  </body>
+</html>
